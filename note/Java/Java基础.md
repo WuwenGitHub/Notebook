@@ -10,4 +10,4 @@
   2. Transient
       * 对特定的对象数据在serialization时不进行存储
       * 底层的java虚拟机来说，该类型的变量不是一个类的永久性的状态
-      * 例子[./LoggingInfo.java]
+      * [例子1](./LoggingInfo.java)
