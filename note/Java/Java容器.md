@@ -9,9 +9,9 @@
        1. 使用HashMap存储数据  
            * private transient HashMap<E,Object> map; 
            * private static final Object PRESENT = new Object();
-           * ```public  boolean add(E e){
+           * `public  boolean add(E e){
                      return map.put(e, PRESENT) = null;
-                 }```
+                 }`
        2. fast-fail机制  
        3. 非同步  
        4. 迭代时间=HashSet中元素个数+HashMap容量
