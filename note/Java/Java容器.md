@@ -72,21 +72,21 @@
 
 ##Map
    * HashMap  
-        1.非同步, 允许key为null(存储在数组首位,index=0)  
-        2. fast-fail  
-        3. 存储结构  
-             * 数组方式存储(按2倍进行扩容)  
-                  ```transient Node<K,V>[] table; ```  
-             * 使用拉链法解决冲突  
-             * 数组类型**Node<K,V>**  
-             * Node<K,V>结构  
-               ```static class Node<K,V> implements Map.Entry<K,V> {}{
+        1.非同步, 允许key为null(存储在数组首位,index=0)
+        2. fast-fail
+        3. 存储结构
+	   * 数组方式存储(按2倍进行扩容)
+	   `transient Node<K,V>[] table;`
+	   * 使用拉链法解决冲突
+	   * 数组类型**Node<K,V>**
+	   * Node<K,V>结构
+	   ```static class Node<K,V> implements Map.Entry<K,V> {}{
                   final int hash;  
                   final K key;  
                   V value;  
                   Node<K,V> next;
-              }```  
-        4. entrySet？如何实现的？  
+              }```
+	4. entrySet实现?
    * HashTable  
         1. 实现**Map**接口
 	>permits **null** values and the **null** key
