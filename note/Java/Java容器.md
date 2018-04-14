@@ -80,12 +80,14 @@
 	   * 使用拉链法解决冲突
 	   * 数组类型**Node<K,V>**
 	   * Node<K,V>结构
-	   ```static class Node<K,V> implements Map.Entry<K,V> {}{
+	   ```java
+	   static class Node<K,V> implements Map.Entry<K,V> {}{
                   final int hash;  
                   final K key;  
                   V value;  
                   Node<K,V> next;
-              }```
+              }
+	      ```
 	4. entrySet实现?
    * HashTable  
         1. 实现**Map**接口
