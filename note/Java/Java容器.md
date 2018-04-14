@@ -75,11 +75,11 @@
         1.非同步, 允许key为null(存储在数组首位,index=0)  
         2. fast-fail  
         3. 存储结构  
-             ① 数组方式存储(按2倍进行扩容)  
+             * 数组方式存储(按2倍进行扩容)  
                   ```transient Node<K,V>[] table; ```  
-             ② 使用拉链法解决冲突  
-             ③ 数组类型**Node<K,V>**  
-             ④ Node<K,V>结构  
+             * 使用拉链法解决冲突  
+             * 数组类型**Node<K,V>**  
+             * Node<K,V>结构  
                ```static class Node<K,V> implements Map.Entry<K,V> {}{
                   final int hash;  
                   final K key;  
