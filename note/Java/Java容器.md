@@ -4,7 +4,7 @@
 ## Collection
   包含Set、List、Queue
 
-###Set
+### Set
    * HashSet  
        1. 使用HashMap存储数据  
            * private transient HashMap<E,Object> map; 
@@ -33,7 +33,7 @@
             * 按插入顺序存储  
         3. fast-fail机制  
         4. 非同步 
-###List
+### List
    * ArrayList
        1. 继承 **AbstractList** 及 **fast-fail** 机制
         `protected transient int modCount = 0;`  
@@ -68,7 +68,7 @@
            * public E pop() {...}
 
 
-###Queue
+### Queue
    * LinkedList
    * PriorityQueue  
 
