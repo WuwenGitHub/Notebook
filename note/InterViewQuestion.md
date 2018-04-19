@@ -4,7 +4,7 @@
      &nbsp; `public class Stack<E> extends Vector<E>`  
      &nbsp;* `protected Object[] elementData;`  
      &nbsp;* `synchronized`  
-   2. **Heap**
+   2. **Heap**  
      完全二叉树
      大顶堆、小顶堆
 * 进程与线程的区别?进程间如何通信
