@@ -76,6 +76,8 @@
         2. fast-fail
         3. 存储结构
 	   * 数组方式存储(按2倍进行扩容)
+	   * 存值遵循LRU(Least Recently Used)算法
+	       系统认为最近使用的值可能会被系统经常用到，而添加得早的值用到的几率较小
 	   `transient Node<K,V>[] table;`
 	   * 使用拉链法解决冲突
 	   * 数组类型**Node<K,V>**
