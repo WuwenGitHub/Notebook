@@ -1,1 +1,1 @@
-<h1>一、HashMap特点</h1>     采用<b>数组</b>+链表+红黑树的方式来存储和组织数据<h1> 二、</h1>
+<h1>一、HashMap特点</h1>     采用<b>数组</b>+<b>链表</b>+<b>红黑树</b>的方式来存储和组织数据<h1> 二、HashMap类的putValue的原理</h1>     <code>final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {...}</code>
