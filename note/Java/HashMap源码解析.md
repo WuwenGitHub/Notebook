@@ -113,14 +113,11 @@ final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
             dir = 1;// 要添加的元素应该放置在当前节点的右侧
         else if ((pk = p.key) == k || (k != null && k.equals(pk))) // 如果当前节点的键对象 和 指定key对象相同
             return p; // 那么就返回当前节点对象，在外层方法会对v进行写入
-
         // 走到这一步说明 当前节点的hash值  和 指定key的hash值  是相等的，但是equals不等
         else if ((kc == null &&
                   (kc = comparableClassFor(k)) == null) ||
                  (dir = compareComparables(kc, k, pk)) == 0) {
-
              // 走到这里说明：指定key没有实现comparable接口 或者 实现comparable接口并且和当前节点的键对象比较之后相等（仅限第一次循环）
-        
             /*
              * searched 标识是否已经对比过当前节点的左右子节点了
              * 如果还没有遍历过，那么就递归遍历对比，看是否能够得到那个键对象equals相等的的节点
@@ -144,7 +141,6 @@ final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
             // 走到这里就说明，遍历了所有子节点也没有找到和当前键equals相等的节点
             dir = tieBreakOrder(k, pk);
         }
-
         TreeNode<K,V> xp = p; // 定义xp指向当前节点
         /*
          * 如果dir小于等于0，那么看当前节点的左节点是否为空，如果为空，就可以把要添加的元素作为当前节点的左节点，如果不为空，还需要下一轮继续比较
