@@ -165,7 +165,7 @@ final TreeNode<K,V> putTreeVal(HashMap<K,V> map, Node<K,V>[] tab,
                 ((TreeNode<K,V>)xpn).prev = x; // 那么原来的next节点的前节点指向到新的树节点
             moveRootToFront(tab, balanceInsertion(root, x)); // 重新平衡，以及新的根节点置顶
             return null; // 返回空，意味着产生了一个新节点
-	}
+        }
     }
 }
 </code></pre>
