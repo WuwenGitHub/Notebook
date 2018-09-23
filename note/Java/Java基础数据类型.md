@@ -8,7 +8,7 @@
 </ul>
 <h1>一、数据类型</h1>
 <h4>原始数据类型及包装类型</h4>
-<table border="1">
+<table>
 	<tr>
 		<th>原始数据类型</th>
 		<th>包装类型</th>
@@ -109,7 +109,7 @@ private static class ObjectCache {
 </pre>
 
 缓存对象
-<table border="1">
+<table>
 	<tr>
 		<th>包装类型</th>
 		<th>缓存对象(基本数据类型值)</th>
@@ -225,7 +225,7 @@ java -server -XX:AutoBoxCacheMax=100 xxx<br \>
 	<li>使用java.util.concurrent.atomic下的相关类型替换</li>
 </ul>
 <h4>数组存储</h4>
-<table border="1">
+<table>
 	<tr>
 		<th>数组类型</th>
 		<th>内存中各元素关系</th>
