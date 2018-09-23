@@ -6,7 +6,7 @@
 		<th>Hashtable</th>
 	</tr>
 	<tr>
-		<td rowspan="4">类继承及接口实现</td>
+		<td rowspan="2">类继承及接口实现</td>
 		<td><table>
 			<tr>
 				<td>extends</td>
