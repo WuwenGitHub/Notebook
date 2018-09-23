@@ -1,0 +1,45 @@
+<h1>HashMap与Hashtable区别</h1>
+<table>
+	<tr>
+		<th></th>
+		<th>HashMap</th>
+		<th>Hashtable</th>
+	</tr>
+	<tr>
+		<td rowspan="4">类继承及接口实现</td>
+		<td><table>
+			<tr>
+				<td>extends</td>
+				<td>java.util.AbstractMap<K,V></td>
+			</tr>
+			<tr>
+				<td rowspan="3">implements</td>
+				<td>java.util.Map<K,V></td>
+			</tr>
+			<tr>
+				<td>java.lang.Cloneable</td>
+			</tr>
+			<tr>
+				<td>java.io.Serializable</td>
+			</tr
+		</table></td>
+    		<td></td>
+    		<td><table>
+			<tr>
+				<td>extends</td>
+				<td>java.util.Dictionary<K,V></td>
+			</tr>
+			<tr>
+				<td rowspan="3">implements</td>
+				<td>java.util.Map<K,V></td>
+			</tr>
+			<tr>
+				<td>java.lang.Cloneable</td>
+			</tr>
+			<tr>
+				<td>java.io.Serializable</td>
+			</tr
+		</table></td>
+    		<td></td>
+	</tr>
+</table>
