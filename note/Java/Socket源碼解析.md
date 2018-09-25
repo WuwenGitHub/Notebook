@@ -14,7 +14,7 @@
     /**
      * The implementation of this Socket.
      */
-    <font color="red">SocketImpl impl</font>;
+    <h5 style="color:red">SocketImpl impl</h5>;
 
     /**
      * Are we using an older SocketImpl?
@@ -24,17 +24,16 @@
 <h3>2.构造器</h3>
 <ul>
 	<li>Unconnected socket</li>
-	<pre><code>
-/**
- * Creates an <font color="red">unconnected socket</font>, with the
- * system-default type of <font color="red">SocketImpl</font>.
- *
- * @since   JDK1.1
- * @revised 1.4
- */
- public Socket() {
+	<pre><code>/**
+  * Creates an <font color="red">unconnected socket</font>, with the
+  * system-default type of <font color="red">SocketImpl</font>.
+  *
+  * @since   JDK1.1
+  * @revised 1.4
+  */
+  public Socket() {
 	setImpl();
- }
+  }
  <br>
  /**
   * Creates an <font color="red">unconnected socket</font>, specifying the type of proxy, if any,
