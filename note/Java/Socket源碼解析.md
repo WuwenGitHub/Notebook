@@ -15,7 +15,7 @@
     /**
      * The implementation of this Socket.
      */
-    SocketImpl impl;
+    <front color="red">SocketImpl impl</code>;
 
     /**
      * Are we using an older SocketImpl?
@@ -26,7 +26,7 @@
 2.构造器<br>
 <ul>
 	<li>Unconnected socket</li>
-	<pre><code>
+	<code>
 /**
  * Creates an <front color="red">unconnected socket</front>, with the
  * system-default type of <front color="red">SocketImpl</front>.
@@ -121,67 +121,6 @@
             this.impl.setSocket(this);
         }
     }
-	</code></pre>
+	</code>
 	<li>Connected socket</li>
 </ul>
-<code>
-    /**
-     * The implementation of this Socket.
-     */
-    SocketImpl impl;
-
-    /**
-     * Creates an unconnected socket, with the
-     * system-default type of SocketImpl.
-     *
-     * @since   JDK1.1
-     * @revised 1.4
-     */
-    public Socket() {
-        setImpl();
-    }
-
-    /**
-     * Creates an unconnected socket, specifying the type of proxy, if any,
-     * ......
-     *
-     * @since   1.5
-     */
-    public Socket(Proxy proxy) {
-        .....
-        if (type == Proxy.Type.SOCKS || type == Proxy.Type.HTTP) {
-            ......
-            impl = type == Proxy.Type.SOCKS ? new SocksSocketImpl(p)
-                                            : new HttpConnectSocketImpl(p);
-            impl.setSocket(this);
-        } else {
-            if (p == Proxy.NO_PROXY) {
-                if (factory == null) {
-                    impl = new PlainSocketImpl();
-                    impl.setSocket(this);
-                } else
-                    setImpl();
-            } else
-                throw new IllegalArgumentException("Invalid Proxy");
-        }
-    }
-
-    /**
-     * Creates an unconnected Socket with a user-specified
-     * SocketImpl.
-     * <P>
-     * @param impl an instance of a <B>SocketImpl</B>
-     * the subclass wishes to use on the Socket.
-     *
-     * @exception SocketException if there is an error in the underlying protocol,
-     * such as a TCP error.
-     * @since   JDK1.1
-     */
-    protected Socket(SocketImpl impl) throws SocketException {
-        this.impl = impl;
-        if (impl != null) {
-            checkOldImpl();
-            this.impl.setSocket(this);
-        }
-    }
-</code>
