@@ -28,8 +28,8 @@
 	<li>Unconnected socket</li>
 	<pre><code>
 /**
- * Creates an unconnected socket, with the
- * system-default type of SocketImpl.
+ * Creates an <front color="red">unconnected socket</front>, with the
+ * system-default type of <front color="red">SocketImpl</front>.
  *
  * @since   JDK1.1
  * @revised 1.4
@@ -39,13 +39,13 @@
  }
  <br>
  /**
-  * Creates an unconnected socket, specifying the type of proxy, if any,
+  * Creates an <front color="red">unconnected socket</front>, specifying the type of proxy, if any,
   * that should be used regardless of any other settings.
-  * <br>
+  * 
   * If there is a security manager, its {@code checkConnect} method
   * is called with the proxy host address and port number
   * as its arguments. This could result in a SecurityException.
-  * <br>
+  * 
   * Examples:
   * {@code Socket s = new Socket(Proxy.NO_PROXY);} will create
   * a plain socket ignoring any other proxy configuration.
