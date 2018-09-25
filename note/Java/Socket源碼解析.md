@@ -10,26 +10,24 @@
     private boolean closed = false;
     private Object closeLock = new Object();
     private boolean shutIn = false;
-    private boolean shutOut = false;
-
+    private boolean shutOut = false;<br>
     /**
      * The implementation of this Socket.
      */
-    <front color="red">SocketImpl impl</code>;
+    <font color="red">SocketImpl impl</font>;
 
     /**
      * Are we using an older SocketImpl?
      */
     private boolean oldImpl = false;
-
 </code></pre>
 2.构造器<br>
 <ul>
 	<li>Unconnected socket</li>
 	<pre><code>
 /**
- * Creates an <front color="red">unconnected socket</front>, with the
- * system-default type of <front color="red">SocketImpl</front>.
+ * Creates an <font color="red">unconnected socket</font>, with the
+ * system-default type of <font color="red">SocketImpl</font>.
  *
  * @since   JDK1.1
  * @revised 1.4
@@ -39,7 +37,7 @@
  }
  <br>
  /**
-  * Creates an <front color="red">unconnected socket</front>, specifying the type of proxy, if any,
+  * Creates an <font color="red">unconnected socket</font>, specifying the type of proxy, if any,
   * that should be used regardless of any other settings.
   * 
   * If there is a security manager, its {@code checkConnect} method
