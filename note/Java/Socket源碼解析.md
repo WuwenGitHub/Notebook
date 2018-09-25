@@ -26,7 +26,7 @@
 2.构造器<br>
 <ul>
 	<li>Unconnected socket</li>
-	<code>
+	<pre><code>
 /**
  * Creates an <front color="red">unconnected socket</front>, with the
  * system-default type of <front color="red">SocketImpl</front>.
@@ -121,6 +121,6 @@
             this.impl.setSocket(this);
         }
     }
-	</code>
+	</code></pre>
 	<li>Connected socket</li>
 </ul>
