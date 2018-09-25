@@ -47,12 +47,11 @@
   * as its arguments. This could result in a SecurityException.
   * <br>
   * Examples:
-  * <ul> <li>{@code Socket s = new Socket(Proxy.NO_PROXY);} will create
-  * a plain socket ignoring any other proxy configuration.</li>
-  * <li>{@code Socket s = new Socket(new Proxy(Proxy.Type.SOCKS, new InetSocketAddress("socks.mydom.com", 1080)));}
+  * {@code Socket s = new Socket(Proxy.NO_PROXY);} will create
+  * a plain socket ignoring any other proxy configuration.
+  * {@code Socket s = new Socket(new Proxy(Proxy.Type.SOCKS, new InetSocketAddress("socks.mydom.com", 1080)));}
   * will create a socket connecting through the specified SOCKS proxy
-  * server.</li>
-  * </ul>
+  * server.
   *
   * @param proxy a {@link java.net.Proxy Proxy} object specifying what kind
   *              of proxying should be used.
