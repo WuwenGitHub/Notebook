@@ -24,11 +24,6 @@
 <h3>2.构造器</h3>
 <ul>
 	<li>Unconnected socket</li>
-	<h3>Socket()</h3>
-	<pre>
-		Creates an <font color="red">unconnected socket</font>, with the system-default type of <font color="red">SocketImpl</font>.
-	</pre>
-
 	<pre><code>
 /**
  * Creates an <font color="red">unconnected socket</font>, with the
