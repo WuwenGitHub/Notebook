@@ -1,5 +1,5 @@
 <h1>一、实现逻辑</h1>
-1.参数<br>
+<h3>1.参数</h3>
 <pre><code>
     /**
      * Various states of this socket.
@@ -21,9 +21,14 @@
      */
     private boolean oldImpl = false;
 </code></pre>
-2.构造器<br>
+<h3>2.构造器</h3>
 <ul>
 	<li>Unconnected socket</li>
+	<h3>Socket()</h3>
+	<pre>
+		Creates an <font color="red">unconnected socket</font>, with the system-default type of <font color="red">SocketImpl</font>.
+	</pre>
+
 	<pre><code>
 /**
  * Creates an <font color="red">unconnected socket</font>, with the
@@ -45,8 +50,7 @@
   * as its arguments. This could result in a SecurityException.
   * 
   * Examples:
-  * {@code Socket s = new Socket(Proxy.NO_PROXY);} will create
-  * a plain socket ignoring any other proxy configuration.
+  * {@code Socket s = new Socket(Proxy.NO_PROXY);} will create a plain socket ignoring any other proxy configuration.
   * {@code Socket s = new Socket(new Proxy(Proxy.Type.SOCKS, new InetSocketAddress("socks.mydom.com", 1080)));}
   * will create a socket connecting through the specified SOCKS proxy
   * server.
