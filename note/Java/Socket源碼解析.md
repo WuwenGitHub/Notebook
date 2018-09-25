@@ -41,18 +41,18 @@
  /**
   * Creates an unconnected socket, specifying the type of proxy, if any,
   * that should be used regardless of any other settings.
-  * <P>
+  * <br>
   * If there is a security manager, its {@code checkConnect} method
   * is called with the proxy host address and port number
   * as its arguments. This could result in a SecurityException.
-  * <P>
+  * <br>
   * Examples:
-  * <UL> <LI>{@code Socket s = new Socket(Proxy.NO_PROXY);} will create
-  * a plain socket ignoring any other proxy configuration.</LI>
-  * <LI>{@code Socket s = new Socket(new Proxy(Proxy.Type.SOCKS, new InetSocketAddress("socks.mydom.com", 1080)));}
+  * <ul> <li>{@code Socket s = new Socket(Proxy.NO_PROXY);} will create
+  * a plain socket ignoring any other proxy configuration.</li>
+  * <li>{@code Socket s = new Socket(new Proxy(Proxy.Type.SOCKS, new InetSocketAddress("socks.mydom.com", 1080)));}
   * will create a socket connecting through the specified SOCKS proxy
-  * server.</LI>
-  * </UL>
+  * server.</li>
+  * </ul>
   *
   * @param proxy a {@link java.net.Proxy Proxy} object specifying what kind
   *              of proxying should be used.
