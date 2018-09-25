@@ -25,8 +25,8 @@
 <ul>
 	<li>Unconnected socket</li>
 	<pre><code>/**
-  * Creates an <font color="red">unconnected socket</font>, with the
-  * system-default type of <font color="red">SocketImpl</font>.
+  * Creates an <B>unconnected socket</B>, with the
+  * system-default type of <B>SocketImpl</B>.
   *
   * @since   JDK1.1
   * @revised 1.4
@@ -36,7 +36,7 @@
   }
  <br>
  /**
-  * Creates an <font color="red">unconnected socket</font>, specifying the type of proxy, if any,
+  * Creates an <B>unconnected socket</B>, specifying the type of proxy, if any,
   * that should be used regardless of any other settings.
   * 
   * If there is a security manager, its {@code checkConnect} method
@@ -90,19 +90,19 @@
         } else {
             if (p == Proxy.NO_PROXY) {
                 if (factory == null) {
-                    impl = new PlainSocketImpl();
-                    impl.setSocket(this);
+                    <var>impl = new PlainSocketImpl();</var>
+                    <var>impl.setSocket(this);</var>
                 } else
-                    setImpl();
+                    <var>setImpl();</var>
             } else
                 throw new IllegalArgumentException("Invalid Proxy");
         }
     }
     <br>
   /**
-   * Creates an unconnected Socket with a user-specified
+   * Creates an <B>unconnected Socket</B> with a user-specified
    * SocketImpl.
-   * <P>
+   * 
    * @param impl an instance of a <B>SocketImpl</B>
    * the subclass wishes to use on the Socket.
    *
@@ -110,8 +110,8 @@
    * such as a TCP error.
    * @since   JDK1.1
    */
-    protected Socket(SocketImpl impl) throws SocketException {
-        this.impl = impl;
+    protected Socket(<var>SocketImpl impl</var>) throws SocketException {
+        <var>this.impl = impl;</var>
         if (impl != null) {
             checkOldImpl();
             this.impl.setSocket(this);
