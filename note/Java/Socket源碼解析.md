@@ -14,7 +14,7 @@
     /**
      * The implementation of this Socket.
      */
-    <em>SocketImpl impl</em> ;
+    <var>SocketImpl impl</var> ;
 
     /**
      * Are we using an older SocketImpl?
