@@ -14,7 +14,7 @@
     /**
      * The implementation of this Socket.
      */
-    <font style="text-decoration: none;color: red">SocketImpl impl</font> ;
+    <em>SocketImpl impl</em> ;
 
     /**
      * Are we using an older SocketImpl?
