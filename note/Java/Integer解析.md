@@ -29,7 +29,7 @@
             static final int low = -128;
             static final int high;
             static final Integer cache[];
-
+	    <br />
             static {
                 // high value may be configured by property
             	int h = 127;
@@ -46,16 +46,16 @@
                     }
             	}
             	high = h;
-
+		<br />
             	cache = new Integer[(high - low) + 1];
             	int j = low;
             	for(int k = 0; k < cache.length; k++)
                     cache[k] = new Integer(j++);
-
+		<br />
             	// range [-128, 127] must be interned (JLS7 5.1.7)
             	assert IntegerCache.high >= 127;
             }
-
+	    <br />
             private IntegerCache() {}
    	}
 </code></pre>
