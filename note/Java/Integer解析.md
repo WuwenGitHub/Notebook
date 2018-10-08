@@ -13,10 +13,10 @@
 同时针对自动装箱的Integer.valueOf()方法，Integer的源码为：
 <pre><code>
 	public static Integer valueOf(int i) {
-                 if (i >= IntegerCache.low && i <= IntegerCache.high)
-                     return IntegerCache.cache[i + (-IntegerCache.low)];
-                 return new Integer(i);
-             }
+            if (i >= IntegerCache.low && i <= IntegerCache.high)
+                return IntegerCache.cache[i + (-IntegerCache.low)];
+            return new Integer(i);
+        }
 </code></pre>
 其中IntegerCache代表Integer缓存。</br>
 该段源码表明，对范围在IntegerCache.low～IntegerCache.high之间的数，将直接返回缓存中值，进行比较时也将会返回<b>true</b>；而在此范围以外的数值，则直接返回的是一个新的Integer对象，除非使用equals()方法，否则都将返回false
@@ -26,37 +26,37 @@
 源码表示：
 <pre><code>
 	private static class IntegerCache {
-        		static final int low = -128;
-        		static final int high;
-        		static final Integer cache[];
+            static final int low = -128;
+            static final int high;
+            static final Integer cache[];
 
-        		static {
-            			// high value may be configured by property
-            			int h = 127;
-            			String integerCacheHighPropValue =
-                			sun.misc.VM.getSavedProperty("java.lang.Integer.IntegerCache.high");
-           			if (integerCacheHighPropValue != null) {
-                			try {
-                   			      int i = parseInt(integerCacheHighPropValue);
-                  			      i = Math.max(i, 127);
-                    			      // Maximum array size is Integer.MAX_VALUE
-                    			      h = Math.min(i, Integer.MAX_VALUE - (-low) -1);
-                			} catch( NumberFormatException nfe) {
-                    			      // If the property cannot be parsed into an int, ignore it.
-                			}
-            			}
-            			high = h;
+            static {
+                // high value may be configured by property
+            	int h = 127;
+            	String integerCacheHighPropValue =
+                    sun.misc.VM.getSavedProperty("java.lang.Integer.IntegerCache.high");
+           	if (integerCacheHighPropValue != null) {
+                    try {
+                        int i = parseInt(integerCacheHighPropValue);
+                  	i = Math.max(i, 127);
+                    	// Maximum array size is Integer.MAX_VALUE
+                    	h = Math.min(i, Integer.MAX_VALUE - (-low) -1);
+                    } catch( NumberFormatException nfe) {
+                    	// If the property cannot be parsed into an int, ignore it.
+                    }
+            	}
+            	high = h;
 
-            			cache = new Integer[(high - low) + 1];
-            			int j = low;
-            			for(int k = 0; k < cache.length; k++)
-                			cache[k] = new Integer(j++);
+            	cache = new Integer[(high - low) + 1];
+            	int j = low;
+            	for(int k = 0; k < cache.length; k++)
+                    cache[k] = new Integer(j++);
 
-            			// range [-128, 127] must be interned (JLS7 5.1.7)
-            			assert IntegerCache.high >= 127;
-        		}
+            	// range [-128, 127] must be interned (JLS7 5.1.7)
+            	assert IntegerCache.high >= 127;
+            }
 
-        		private IntegerCache() {}
+            private IntegerCache() {}
    	}
 </code></pre>
 此段代码将会于Integer类加载时执行，通常情况下，默认缓存从Integer.low=-128～Integer.high=127的数，但同时可以使用JVM的启动参数来设置缓存上限(<code>-XX:AutoBoxCacheMax=size</code>)，即 java.lang.Integer.IntegerCache.high的值。
