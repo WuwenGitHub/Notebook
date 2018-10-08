@@ -67,12 +67,12 @@
 toString()源码:
 <pre><code>
 	public static String toString(int i) {
-        		if (i == Integer.MIN_VALUE)
-            			return "-2147483648";
-        		int size = (i < 0) ? stringSize(-i) + 1 : stringSize(i);
-        		char[] buf = new char[size];
-        		getChars(i, size, buf);
-        		return new String(buf, true);
+            if (i == Integer.MIN_VALUE)
+            	return "-2147483648";
+            int size = (i < 0) ? stringSize(-i) + 1 : stringSize(i);
+            char[] buf = new char[size];
+            getChars(i, size, buf);
+            return new String(buf, true);
     	}
 </code></pre>
 
@@ -82,7 +82,7 @@ toString()源码:
 <h5>片段一：</h5>
 <pre><code>
 	if (i == Integer.MIN_VALUE)
-            		return "-2147483648";
+            return "-2147483648";
 </code></pre>
 由于int类型的数据的取值范围为-2^31～2^31 - 1，正负对应来看，负数较正数多了一个,所以有了代码片段一；且若将负数全部转换为正数来进行处理，此时会造成越界
 
