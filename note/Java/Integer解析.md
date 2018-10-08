@@ -77,14 +77,14 @@ toString()源码:
 </code></pre>
 
 <h4>解析：</h4>
-就将数值转化为String类型输出来说，正负数差异仅仅在于符号位，或者说是否需要在数字最前边添加负号的差异，处理过程其实都相同
+就将数值转化为String类型输出来说，正负数差异仅仅在于符号位，或者说是否需要在数字最前边添加负号的差异。去掉此差异后，可采用相同的方式进行处理
 
 <h5>片段一：</h5>
 <pre><code>
 	if (i == Integer.MIN_VALUE)
             return "-2147483648";
 </code></pre>
-由于int类型的数据的取值范围为-2^31～2^31 - 1，正负对应来看，负数较正数多了一个,所以有了代码片段一；且若将负数全部转换为正数来进行处理，此时会造成越界
+由于int类型的数据的取值范围为-2147483648～2147483647，正负对应来看，负数较正数多了一个,所以有了代码片段一；且若将负数全部转换为正数来进行处理，此时会造成越界
 
 <h5>片段二：</h5>
 <pre><code>
@@ -92,3 +92,98 @@ toString()源码:
         char[] buf = new char[size];
 </code></pre>
 在除掉多余的数字后，剩下的值仅存在正负号的差异
+由于负数较正数在转化为String类型时 的差异表现在多了一个负号
+
+该段代码的主要目的是提取出整数i的位数，并创建一个字符数组。而提取方法采用<code>stringSize</code>
+<pre><code>
+    final static int [] sizeTable = { 9, 99, 999, 9999, 99999, 999999, 9999999,
+                                      99999999, 999999999, Integer.MAX_VALUE };
+
+    // Requires positive x
+    static int stringSize(int x) {
+        for (int i=0; ; i++)
+            if (x <= sizeTable[i])
+                return i+1;
+    }
+</code></pre>
+
+<h5>片段三：</h5>
+<pre><code>
+    getChars(i, size, buf);
+</code></pre>
+该段代码主要是提取出整数的每一位的值，具体实现方式如下：
+<pre><code>
+    static void getChars(int i, int index, char[] buf) {
+        int q, r;
+        int charPos = index;
+        char sign = 0;
+
+        if (i < 0) {
+            sign = '-';
+            i = -i;
+        }
+
+        // Generate two digits per iteration
+        while (i >= 65536) {
+            q = i / 100;
+        // really: r = i - (q * 100);
+            r = i - ((q << 6) + (q << 5) + (q << 2));
+            i = q;
+            buf [--charPos] = DigitOnes[r];
+            buf [--charPos] = DigitTens[r];
+        }
+
+        // Fall thru to fast mode for smaller numbers
+        // assert(i <= 65536, i);
+        for (;;) {
+            q = (i * 52429) >>> (16+3);
+            r = i - ((q << 3) + (q << 1));  // r = i-(q*10) ...
+            buf [--charPos] = digits [r];
+            i = q;
+            if (i == 0) break;
+        }
+        if (sign != 0) {
+            buf [--charPos] = sign;
+        }
+    }
+</code></pre>
+<b>两点疑惑：</b>
+1.为什么在getChars方法中，将整型数字写入到字符数组的过程中为什么按照数字65536分成了两部分呢?这个65535是怎么来的?
+片段一：
+<pre><code>
+    // Generate two digits per iteration
+        while (i >= 65536) {
+            q = i / 100;
+        // really: r = i - (q * 100);
+            r = i - ((q << 6) + (q << 5) + (q << 2));
+            i = q;
+            buf [--charPos] = DigitOnes[r];
+            buf [--charPos] = DigitTens[r];
+        }
+</code></pre>
+片段二：
+<pre><code>
+    // Fall thru to fast mode for smaller numbers
+        // assert(i <= 65536, i);
+        for (;;) {
+            q = (i * 52429) >>> (16+3);
+            r = i - ((q << 3) + (q << 1));  // r = i-(q*10) ...
+            buf [--charPos] = digits [r];
+            i = q;
+            if (i == 0) break;
+        }
+</code></pre>
+2.在上面两段代码的部分二中，在对i进行除十操作的过程中为什么选择先乘以52429在向右移位19位。其中52429和19是怎么来的?
+
+<b>解答：</b>
+注意：
+<pre>
+移位的效率比直接乘除的效率要高
+乘法的效率比除法的效率要高
+</pre>
+代码解读：
+
+<h5>片段四：</h5>
+<pre><code>
+    return new String(buf, true);
+</code></pre>
