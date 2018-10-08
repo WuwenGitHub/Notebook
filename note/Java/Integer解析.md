@@ -64,3 +64,31 @@
 <h3>疑问：</h3>为什么仅缓存从-128开始的值(byte型的取值范围即为-128～127)
 
 <h1>toString()方法</h1>
+toString()源码:
+<pre><code>
+	public static String toString(int i) {
+        		if (i == Integer.MIN_VALUE)
+            			return "-2147483648";
+        		int size = (i < 0) ? stringSize(-i) + 1 : stringSize(i);
+        		char[] buf = new char[size];
+        		getChars(i, size, buf);
+        		return new String(buf, true);
+    	}
+</code></pre>
+
+<h4>解析：</h4>
+就将数值转化为String类型输出来说，正负数差异仅仅在于符号位，或者说是否需要在数字最前边添加负号的差异，处理过程其实都相同
+
+<h5>片段一：</h5>
+<pre><code>
+	if (i == Integer.MIN_VALUE)
+            		return "-2147483648";
+</code></pre>
+由于int类型的数据的取值范围为-2^31～2^31 - 1，正负对应来看，负数较正数多了一个,所以有了代码片段一；且若将负数全部转换为正数来进行处理，此时会造成越界
+
+<h5>片段二：</h5>
+<pre><code>
+	int size = (i < 0) ? stringSize(-i) + 1 : stringSize(i);
+        		char[] buf = new char[size];
+</code></pre>
+在除掉多余的数字后，剩下的值仅存在正负号的差异
