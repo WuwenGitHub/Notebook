@@ -89,6 +89,6 @@ toString()源码:
 <h5>片段二：</h5>
 <pre><code>
 	int size = (i < 0) ? stringSize(-i) + 1 : stringSize(i);
-        		char[] buf = new char[size];
+        	char[] buf = new char[size];
 </code></pre>
 在除掉多余的数字后，剩下的值仅存在正负号的差异
