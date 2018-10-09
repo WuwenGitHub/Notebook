@@ -91,9 +91,9 @@ toString()源码:
 	int size = (i < 0) ? stringSize(-i) + 1 : stringSize(i);
         char[] buf = new char[size];
 </code></pre>
-在除掉多余的数字后，剩下的值仅存在正负号的差异
-由于负数较正数在转化为String类型时 的差异表现在多了一个负号
-
+在除掉多余的数字后，剩下的值仅存在正负号的差异<br />
+由于负数较正数在转化为String类型时 的差异表现在多了一个负号<br />
+<br />
 该段代码的主要目的是提取出整数i的位数，并创建一个字符数组。而提取方法采用<code>stringSize</code>
 <pre><code>
     final static int [] sizeTable = { 9, 99, 999, 9999, 99999, 999999, 9999999,
