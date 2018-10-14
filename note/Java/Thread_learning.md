@@ -1,1 +1,39 @@
-
+<h1>进程、线程的区别与联系</h1>
+<h5>进程</h5>
+<ul>
+	<li>定义</li>
+	<li>生命周期及状态转变</li>
+	<li>进程间通信方式</li>
+</ul>
+<h5>线程</h5>
+<ul>
+	<li>定义</li>
+	<li>生命周期及状态转变</li>
+	<ul>
+		<li>sleep()、wait()、join()、yield()比较</li>
+		<li>notify()/notifyAll()</li>
+		<li>setDaemon()</li>
+		<li>stop()、interrupt()、interrupted()</li>
+	</ul>
+	<li>线程间通信方式</li>
+	<ul>
+		<li>共享对象、阻塞队列</li>
+		<li>生产者、消费者模型</li>
+	</ul>
+	<li>线程调度</li>
+</ul>
+<h1>Java中线程</h1>
+<h5>相关类及实现方式</h5>
+<h5>线程安全</h5>
+<ul>
+	<li>线程同步</li>
+	<ul>
+		<li>同步方法</li>
+		<ul>
+			<li>synchronized、Lock与volatile</li>
+		</ul>
+		<li>对象锁</li>
+		<li>类锁</li>
+	</ul>
+</ul>
+<h1><a href="https://blog.csdn.net/u011163372/article/details/73995897/">相关问题</a></h1>
