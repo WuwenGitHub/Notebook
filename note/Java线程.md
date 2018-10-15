@@ -8,6 +8,7 @@
 <h5>线程</h5>
 <ul>
 	<li>定义</li>
+	<li>实现</li>
 	<li>生命周期及状态转变</li>
 	<ul>
 		<li>sleep()、wait()、join()、yield()比较</li>
