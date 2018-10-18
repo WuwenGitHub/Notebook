@@ -31,7 +31,7 @@
 		<li>数据根式化：对请求消息进行数据格式化。如将字符串转换成格式化数字或格式化日期等</li>
 		<li>数据验证：验证数据的有效性(长度、格式等)，验证结果存储到BindingResult或Error中</li>
 	</ul>
-	<li>Handler执行完成后，向DispatcherServlet返回一个ModelAndView对象</li>
+	<li>Handler执行完成后，向DispatcherServlet返回一个ModelAndView对象，Model是返回的数据对象，View是个逻辑上的View</li>
 	<li>根据返回的ModelAndView，选择一个适合的ViewResolver(必须是已经注册到Spring容器中的ViewResolver)返回给DispatcherServlet</li>
 	<li>ViewResolver结合Model和View，来渲染视图</li>
 	<li>将渲染结果返回给客户端</li>
