@@ -78,11 +78,11 @@ list.stream()
 
 2. Stream的操作分类
    
-   * Intermediate
+   * Intermediate  
    map(mapToInt,flatMap等)、filter、distinct、sorted、peek、skip、parallel、sequential、unordered
-   * Terminal
+   * Terminal  
    forEach、forEachOrdered、toArray、reduce、collect、min、max、count、iterator
-   * Short-circuiting
+   * Short-circuiting  
    anyMatch、allMatch、noneMatch、findFirst、findAny、limit
 
 3. 惰性求值和及早求值方法
