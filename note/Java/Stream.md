@@ -67,11 +67,11 @@ list.stream()
 ### Stream
 1. 聚合操作3步骤
    
-   1.创建Stream
+   1.创建Stream  
    通过stream()方法，取得集合对象的数据集
-   2.Intermediate
+   2.Intermediate  
    通过一系列中间(Intermediate)方法，对数据集进行过滤、检索等数据集的再次处理
-   3.Terminal
+   3.Terminal  
    通过最终(terminal)方法完成对数据集中元素的处理
 
 2. Stream的操作分类
