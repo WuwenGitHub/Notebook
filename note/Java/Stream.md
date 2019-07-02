@@ -37,8 +37,8 @@ list.add(stuD);
 list.add(stuE);
 list.add(stuF);
 ```
-对Sex = "G"的Student的获取  
-1. Iterator迭代/外部迭代
+对Sex = "G"的Student的获取
+1. Iterator迭代/外部迭代  
 通过显示调用Iterator对象的hasNext和next方法完成迭代
 ```
 Iterator<Student> iterator = list.iterator();
@@ -49,7 +49,7 @@ while(iterator.hasNext()) {
 	}
 }
 ```
-2. 聚合操作/内部迭代
+2. 聚合操作/内部迭代  
 通过stream方法创建Stream,然后通过filter方法对源数据进行过滤，最后通过forEach方法进行迭代
 常与Lambda表达式一起使用
 ```
