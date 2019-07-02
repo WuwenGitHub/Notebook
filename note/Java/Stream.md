@@ -50,3 +50,9 @@ while(iterator.hasNext()) {
 	}
 }
 ```
+|
+```
+list.stream()
+    .filter(student -> student.getSex().equals("G"))
+    .forEach(student -> System.out.println(student.toString()));
+```
