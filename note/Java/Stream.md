@@ -69,13 +69,10 @@ list.stream()
    
    1.创建Stream  
    通过stream()方法，取得集合对象的数据集
-   
    2.Intermediate  
    通过一系列中间(Intermediate)方法，对数据集进行过滤、检索等数据集的再次处理
-   
    3.Terminal  
    通过最终(terminal)方法完成对数据集中元素的处理
-
 2. Stream的操作分类
    * Intermediate  
    map(mapToInt,flatMap等)、filter、distinct、sorted、peek、skip、parallel、sequential、unordered
@@ -83,13 +80,11 @@ list.stream()
    forEach、forEachOrdered、toArray、reduce、collect、min、max、count、iterator
    * Short-circuiting  
    anyMatch、allMatch、noneMatch、findFirst、findAny、limit
-
 3. 惰性求值和及早求值方法
    * 惰性求值方法  
    只描述Stream，最终不产生新集合的方法，例如filter
    * 及早求值方法  
    最终会从Stream产生新值的方法，例如count
-
 4. 创建Stream
    
    * Stream接口的静态工厂方法
