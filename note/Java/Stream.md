@@ -74,6 +74,7 @@ list.stream()
    3. Terminal  
    通过最终(terminal)方法完成对数据集中元素的处理
 2. Stream的操作分类
+   
    * Intermediate  
       map(mapToInt,flatMap等)、filter、distinct、sorted、peek、skip、parallel、sequential、unordered
    * Terminal  
@@ -81,18 +82,22 @@ list.stream()
    * Short-circuiting  
       anyMatch、allMatch、noneMatch、findFirst、findAny、limit
 3. 惰性求值和及早求值方法
+   
    * 惰性求值方法  
    只描述Stream，最终不产生新集合的方法，例如filter
    * 及早求值方法  
    最终会从Stream产生新值的方法，例如count
 4. 创建Stream
+   
    * Stream接口的静态工厂方法
+      
       * of
       * generator
       * iterate
       * empty
    * Collection接口和数组的默认方法
    * 其他
+      
       * Random.ints()
       * BitSet.stream()
       * Pattern.splitAsStream(java.lang.CharSequence)
