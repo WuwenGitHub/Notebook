@@ -5,7 +5,7 @@
 
 ### 聚合操作
 数据类：  
-'''
+```
 public class Student {
 	int no;
 	String name;
@@ -36,12 +36,12 @@ list.add(stuC);
 list.add(stuD);
 list.add(stuE);
 list.add(stuF);
-'''
+```
 现List中有6个Student对象，而对Sex = "G"的Student的获取  
 
 Iterator迭代|聚合操作
 --------------|-----------:
-'''
+```
 Iterator<Student> iterator = list.iterator();
 while(iterator.hasNext()) {
 	Student stu = iterator.next();
@@ -49,4 +49,4 @@ while(iterator.hasNext()) {
 		System.out.println(stu.toString());
 	}
 }
-'''
+```
