@@ -38,9 +38,7 @@ list.add(stuE);
 list.add(stuF);
 ```
 现List中有6个Student对象，而对Sex = "G"的Student的获取  
-
-Iterator迭代|聚合操作
---------------|-----------:
+1. Iterator迭代
 ```
 Iterator<Student> iterator = list.iterator();
 while(iterator.hasNext()) {
@@ -50,7 +48,7 @@ while(iterator.hasNext()) {
 	}
 }
 ```
-|
+2. 聚合操作
 ```
 list.stream()
     .filter(student -> student.getSex().equals("G"))
