@@ -38,7 +38,8 @@ list.add(stuE);
 list.add(stuF);
 ```
 对Sex = "G"的Student的获取  
-1. Iterator迭代
+1. Iterator迭代/外部迭代
+通过显示调用Iterator对象的hasNext和next方法完成迭代
 ```
 Iterator<Student> iterator = list.iterator();
 while(iterator.hasNext()) {
@@ -48,9 +49,18 @@ while(iterator.hasNext()) {
 	}
 }
 ```
-2. 聚合操作
+2. 聚合操作/内部迭代
+通过stream方法创建Stream,然后通过filter方法对源数据进行过滤，最后通过forEach方法进行迭代
+常与Lambda表达式一起使用
 ```
 list.stream()
     .filter(student -> student.getSex().equals("G"))
     .forEach(student -> System.out.println(student.toString()));
 ```
+3. 差异
+   
+   1. Iterator迭代  
+   可自行控制对元素的处理以及处理方式，但只能顺序处理
+   2. 聚合操作  
+   无法控制对元素的迭代（由系统内部实现），迭代不一定有序，可以并行
+
