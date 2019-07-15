@@ -204,7 +204,7 @@
                 ArrayList.this.remove(lastRet);
                 cursor = lastRet;
                 lastRet = -1;
-                `expectedModCount = modCount;``
+                expectedModCount = modCount;
             } catch (IndexOutOfBoundsException ex) {
                 throw new ConcurrentModificationException();
             }
@@ -233,7 +233,7 @@
         }
 
         final void checkForComodification() {
-            if (`modCount != expectedModCount`)
+            if (modCount != expectedModCount)
                 throw new ConcurrentModificationException();
         }
     }
@@ -292,7 +292,7 @@
                 ArrayList.this.add(i, e);
                 cursor = i + 1;
                 lastRet = -1;
-                `expectedModCount = modCount;`
+                expectedModCount = modCount;
             } catch (IndexOutOfBoundsException ex) {
                 throw new ConcurrentModificationException();
             }
