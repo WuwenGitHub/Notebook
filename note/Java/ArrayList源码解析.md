@@ -9,5 +9,17 @@
    3. Linear Time
     * other operations
 3.  扩容
+   1. 默认初始容量
+   
+   ```
+   private static final int DEFAULT_CAPACITY = 10;
+   ...
+   /**
+     * Constructs an empty list with an initial capacity of ten.
+     */
+    public ArrayList() {
+        this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;
+    }
+   ```
 
 4. Synchronized
