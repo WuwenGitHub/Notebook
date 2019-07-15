@@ -24,7 +24,7 @@
    ```
       2. 指定初始容量大小
 
-'''
+```
 /**
      * Constructs an empty list with the specified initial capacity.
      *
@@ -42,11 +42,11 @@
                                                initialCapacity);
         }
     }
-'''
+```
 
       3. 根据传入集合确定
 
-'''
+```
 /**
      * Constructs a list containing the elements of the specified
      * collection, in the order they are returned by the collection's
@@ -66,7 +66,7 @@
             this.elementData = EMPTY_ELEMENTDATA;
         }
     }
-'''
+```
 
    2. 扩容
 4. Synchronized
