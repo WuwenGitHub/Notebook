@@ -21,6 +21,13 @@
 4.  初始容量大小及扩容
    1. 初始容量
       1. 默认初始容量
+
+      2. 指定初始容量大小
+
+      3. 根据传入集合确定
+
+   2. 扩容
+5. Synchronized
 ```
    private static final int DEFAULT_CAPACITY = 10;
    ...
@@ -31,7 +38,7 @@
         this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;
     }
 ```
-      2. 指定初始容量大小
+
 ```
 /**
      * Constructs an empty list with the specified initial capacity.
@@ -51,7 +58,7 @@
         }
     }
 ```
-      3. 根据传入集合确定
+
 ```
 /**
      * Constructs a list containing the elements of the specified
@@ -73,5 +80,3 @@
         }
     }
 ```
-   2. 扩容
-5. Synchronized
