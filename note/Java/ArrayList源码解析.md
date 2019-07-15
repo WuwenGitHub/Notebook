@@ -14,15 +14,13 @@
 3. 各方法时间复杂度
    1. O(1)
    * size()、isEmpty()、get()、set()、iterator()、listIterator()
-   2. O(n)
+   2. 扩容
    * add()
    3. Linear Time
     * other operations
 4.  初始容量大小及扩容
    1. 初始容量
-   * 默认初始容量
-   * 指定初始容量大小
-   * 根据传入集合确定
+   * 默认初始容量、指定初始容量大小、根据传入集合确定
    2. 扩容
 5. Synchronized
 ```
