@@ -76,6 +76,14 @@
    2. 扩容
    ```
    /**
+     * The maximum size of array to allocate.
+     * Some VMs reserve some header words in an array.
+     * Attempts to allocate larger arrays may result in
+     * OutOfMemoryError: Requested array size exceeds VM limit
+     */
+    private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
+
+   /**
      * Increases the capacity to ensure that it can hold at least the
      * number of elements specified by the minimum capacity argument.
      *
@@ -103,4 +111,18 @@
    ```
 5. Synchronized
    1. UnSynchronized
+   多线程下保证同步方法
+      1. 通过同步一些自然封装到列表的类来完成
+      ```
+      This is typically accomplished by synchronizing on 
+      some object that naturally encapsulates the list.
+      ```
+      2. 用Collection.synchronize方法“包装”该List
+      ```
+      If no such object exists, the list should be "wrapped" using the
+      {@link Collections#synchronizedList Collections.synchronizedList}
+      method.  This is best done at creation time, to prevent accidental
+      unsynchronized access to the list:<pre>
+      	List list = Collections.synchronizedList(new ArrayList(...));</pre>
+      ```
    2. fail-fast
