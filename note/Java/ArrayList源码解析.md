@@ -2,7 +2,7 @@
 1.  结构树
 ![ArrayList结构树](https://github.com/WuwenGitHub/Notebook/blob/master/pics/ArrayList%E7%BB%93%E6%9E%84%E6%A0%91.png)
 2. 存储结构
-```
+```java
     /**
      * The array buffer into which the elements of the ArrayList are stored.
      * The capacity of the ArrayList is the length of this array buffer. Any
@@ -21,7 +21,7 @@
 4. 初始容量大小及扩容
    1. 初始容量
       1. 默认初始容量
-      ```
+      ```java
       private static final int DEFAULT_CAPACITY = 10;
       ...
       /**
@@ -32,7 +32,7 @@
       }
       ```
       2. 指定初始容量大小
-      ```
+      ```java
       /**
        * Constructs an empty list with the specified initial capacity.
        *
@@ -52,7 +52,7 @@
       }
       ```
       3. 根据传入集合确定
-      ```
+      ```java
       /**
        * Constructs a list containing the elements of the specified
        * collection, in the order they are returned by the collection's
@@ -74,7 +74,7 @@
       }
       ```
    2. 扩容
-   ```
+   ```java
    /**
      * The maximum size of array to allocate.
      * Some VMs reserve some header words in an array.
@@ -113,12 +113,12 @@
    1. UnSynchronized
    多线程下保证同步方法
       1. 通过同步一些自然封装到列表的类来完成
-      ```
+      ```java
       This is typically accomplished by synchronizing on 
       some object that naturally encapsulates the list.
       ```
       2. 用Collection.synchronize方法“包装”该List
-      ```
+      ```java
       If no such object exists, the list should be "wrapped" using the
       {@link Collections#synchronizedList Collections.synchronizedList}
       method.  This is best done at creation time, to prevent accidental
