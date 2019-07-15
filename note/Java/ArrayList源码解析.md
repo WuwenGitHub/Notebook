@@ -128,6 +128,7 @@
    2. fail-fast
    主要针对`iterator()`和`listIterator(int)`方法，当创建完`iterators`对象后，继续使用非`iterators`的`add`或`remove`对List的结构进行操作，将抛出`ConcurrentModificationException`异常。
    `注意：`迭代器的快速失败行为无法得到确切保证
+   `重点：`modCount
    ```java
    /**
      * Returns a list iterator over the elements in this list (in proper
