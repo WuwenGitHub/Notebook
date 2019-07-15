@@ -126,3 +126,26 @@
       	List list = Collections.synchronizedList(new ArrayList(...));</pre>
       ```
    2. fail-fast
+   主要针对`iterator()`和`listIterator(int)`方法，当创建完`iterators`对象后，继续使用非`iterators`的`add`或`remove`对List的结构进行操作，将抛出`ConcurrentModificationException`异常。
+   `注意：`迭代器的快速失败行为无法得到确切保证
+   ```java
+   <p><a name="fail-fast">
+   The iterators returned by this class's {@link #iterator() iterator} and
+   {@link #listIterator(int) listIterator} methods are <em>fail-fast</em>:</a>
+   if the list is structurally modified at any time after the iterator is
+   created, in any way except through the iterator's own
+   {@link ListIterator#remove() remove} or
+   {@link ListIterator#add(Object) add} methods, the iterator will throw a
+   {@link ConcurrentModificationException}.  Thus, in the face of
+   concurrent modification, the iterator fails quickly and cleanly, rather
+   than risking arbitrary, non-deterministic behavior at an undetermined
+   time in the future.
+
+   <p>Note that the fail-fast behavior of an iterator cannot be guaranteed
+   as it is, generally speaking, impossible to make any hard guarantees in the
+   presence of unsynchronized concurrent modification.  Fail-fast iterators
+   throw {@code ConcurrentModificationException} on a best-effort basis.
+   Therefore, it would be wrong to write a program that depended on this
+   exception for its correctness:  <i>the fail-fast behavior of iterators
+   should be used only to detect bugs.</i>
+   ```
