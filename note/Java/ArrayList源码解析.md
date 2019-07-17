@@ -1,7 +1,7 @@
 # ArrayList特性
 1.  结构树
 ![ArrayList结构树](https://github.com/WuwenGitHub/Notebook/blob/master/pics/ArrayList%E7%BB%93%E6%9E%84%E6%A0%91.png)
-2. 存储结构
+2. 存储/数据结构
 ```java
     /**
      * The array buffer into which the elements of the ArrayList are stored.
