@@ -123,7 +123,7 @@
 
 5. Synchronized
    多线程下不安全，可采用与ArrayList相同的方式来保证同步
-   ```java
+   ```html
    <p><strong>Note that this implementation is not synchronized.</strong>
    If multiple threads access a linked list concurrently, and at least
    one of the threads modifies the list structurally, it <i>must</i> be
