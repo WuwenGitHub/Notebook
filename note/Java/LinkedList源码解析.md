@@ -1,7 +1,7 @@
 # LinkedList特性
 
 1. 结构树
-[!LinkedList结构树]("" "LinkedList结构树")
+![LinkedList结构树](https://github.com/WuwenGitHub/Notebook/blob/master/pics/LinkedList%E7%BB%93%E6%9E%84%E6%A0%91.png "LinkedList结构树")
 
 2. 存储/数据结构
      双向链表
