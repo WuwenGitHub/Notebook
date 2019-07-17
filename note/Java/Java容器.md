@@ -1,11 +1,11 @@
 # 一、概览
   容器主要包括 Collection 和 Map 两种。
-  ![集合总体框架](https://github.com/WuwenGitHub/Notebook/tree/master/pics/集合总体框架.png)
+  ![集合总体框架](https://github.com/WuwenGitHub/Notebook/blob/master/pics/%E9%9B%86%E5%90%88%E6%80%BB%E4%BD%93%E6%A1%86%E6%9E%B6.png)
 
 ## Collection
   包含Set、List、Queue
-  ![集合总体框架](https://github.com/WuwenGitHub/Notebook/tree/master/pics/Collection结构体系图.jpg)
-  ![集合总体框架](https://github.com/WuwenGitHub/Notebook/tree/master/pics/Collection集合体系图2.png)
+  ![集合总体框架](https://github.com/WuwenGitHub/Notebook/blob/master/pics/Collection%E7%BB%93%E6%9E%84%E4%BD%93%E7%B3%BB%E5%9B%BE.jpg)
+  ![集合总体框架](https://github.com/WuwenGitHub/Notebook/blob/master/pics/Collection%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB%E5%9B%BE2.png)
 
 ### Set
    * HashSet  
@@ -74,7 +74,7 @@
    * PriorityQueue  
 
 ##Map
-![集合总体框架](https://github.com/WuwenGitHub/Notebook/tree/master/pics/Map集合框架.png)
+![集合总体框架](https://github.com/WuwenGitHub/Notebook/blob/master/pics/Map%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6.png)
    * HashMap  
         1.非同步, 允许key为null(存储在数组首位,index=0)
         2. fast-fail
