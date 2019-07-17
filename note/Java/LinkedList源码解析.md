@@ -5,7 +5,7 @@
 
 2. 存储/数据结构
      双向链表
-     ```
+     ```java
      /**
      * Pointer to first node.
      * Invariant: (first == null && last == null) ||
@@ -35,7 +35,7 @@
 3. 构造方法
    1. 无参构造方法
    构造一个空的LinkedList
-   ```
+   ```java
    /**
      * Constructs an empty list.
      */
@@ -44,7 +44,7 @@
    ```
    2. 指定集合构造器
    将一个集合作为参数传入，并将集合中的所有元素取出，重构成双向链表
-   ```
+   ```java
    /**
      * Constructs a list containing the elements of the specified
      * collection, in the order they are returned by the collection's
@@ -123,7 +123,7 @@
 
 5. Synchronized
    多线程下不安全，可采用与ArrayList相同的方式来保证同步
-   ```
+   ```java
    <p><strong>Note that this implementation is not synchronized.</strong>
    If multiple threads access a linked list concurrently, and at least
    one of the threads modifies the list structurally, it <i>must</i> be
