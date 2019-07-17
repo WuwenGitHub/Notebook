@@ -122,3 +122,20 @@
        与添加、删除的元素个数有关
 
 5. Synchronized
+   多线程下不安全，可采用与ArrayList相同的方式来保证同步
+   ```
+   <p><strong>Note that this implementation is not synchronized.</strong>
+   If multiple threads access a linked list concurrently, and at least
+   one of the threads modifies the list structurally, it <i>must</i> be
+   synchronized externally.  (A structural modification is any operation
+   that adds or deletes one or more elements; merely setting the value of
+   an element is not a structural modification.)  This is typically
+   accomplished by synchronizing on some object that naturally
+   encapsulates the list.
+
+   If no such object exists, the list should be "wrapped" using the
+   {@link Collections#synchronizedList Collections.synchronizedList}
+   method.  This is best done at creation time, to prevent accidental
+   unsynchronized access to the list:<pre>
+      List list = Collections.synchronizedList(new LinkedList(...));</pre>
+   ```
