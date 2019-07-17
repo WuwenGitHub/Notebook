@@ -1,11 +1,11 @@
 # 一、概览
   容器主要包括 Collection 和 Map 两种。
-  ![集合总体框架](https://github.com/WuwenGitHub/Notebook/blob/master/pics/%E9%9B%86%E5%90%88%E6%80%BB%E4%BD%93%E6%A1%86%E6%9E%B6.png 集合总体框架图)
+  ![集合总体框架](https://github.com/WuwenGitHub/Notebook/blob/master/pics/%E9%9B%86%E5%90%88%E6%80%BB%E4%BD%93%E6%A1%86%E6%9E%B6.png "集合总体框架图")
 
 ## Collection
   包含Set、List、Queue
-  ![Collection结构体系图1](https://github.com/WuwenGitHub/Notebook/blob/master/pics/Collection%E7%BB%93%E6%9E%84%E4%BD%93%E7%B3%BB%E5%9B%BE.jpg Collection结构体系图1)
-  ![Collection结构体系图2](https://github.com/WuwenGitHub/Notebook/blob/master/pics/Collection%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB%E5%9B%BE2.png Collection结构体系图2)
+  ![Collection结构体系图1](https://github.com/WuwenGitHub/Notebook/blob/master/pics/Collection%E7%BB%93%E6%9E%84%E4%BD%93%E7%B3%BB%E5%9B%BE.jpg "Collection结构体系图1")
+  ![Collection结构体系图2](https://github.com/WuwenGitHub/Notebook/blob/master/pics/Collection%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB%E5%9B%BE2.png "Collection结构体系图2")
 
 ### Set
    * HashSet  
@@ -74,7 +74,7 @@
    * PriorityQueue  
 
 ## Map
-![Map集合框架](https://github.com/WuwenGitHub/Notebook/blob/master/pics/Map%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6.png Map集合框架)
+![Map集合框架](https://github.com/WuwenGitHub/Notebook/blob/master/pics/Map%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6.png "Map集合框架")
    * HashMap  
         1.非同步, 允许key为null(存储在数组首位,index=0)
         2. fast-fail
