@@ -19,16 +19,16 @@
 	 * 非法参数 -- 其他范围
    * 基于StringBuffer、StringBuilder
    ```java
-public String(StringBuffer buffer) {
-        synchronized(buffer) {
-            this.value = Arrays.copyOf(buffer.getValue(), buffer.length());
-        }
-    }
+   public String(StringBuffer buffer) {
+           synchronized(buffer) {
+               this.value = Arrays.copyOf(buffer.getValue(), buffer.length());
+           }
+       }
    ```
    ```java
-public String(StringBuilder builder) {
-        this.value = Arrays.copyOf(builder.getValue(), builder.length());
-    }
+   public String(StringBuilder builder) {
+           this.value = Arrays.copyOf(builder.getValue(), builder.length());
+      }
    ```
       * 区别 -- 是否用synchronized代码块对copy方法进行包裹
       * 相同 -- Arrays.copyOf() --浅拷贝
