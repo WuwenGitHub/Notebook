@@ -13,6 +13,7 @@
 ```java
     public String(int[] codePoints, int offset, int count{...}
 ```
+
       * Unicode限制([使用Unicode codespace标准 3.4-D9](http://www.unicode.org/versions/Unicode12.1.0/ch03.pdf#G2212))
          * BMP -- \u0000~\uFFFF -- 一个字符
 	 * 其他Unicode码 -- 0x00FFFF~0X10FFFF -- 两个字符
@@ -30,7 +31,8 @@ public String(StringBuilder builder) {
         this.value = Arrays.copyOf(builder.getValue(), builder.length());
     }
 ```
-	   * 区别 -- 是否用synchronized代码块对copy方法进行包裹
-	   * 相同 -- Arrays.copyOf() --浅拷贝
+
+      * 区别 -- 是否用synchronized代码块对copy方法进行包裹
+      * 相同 -- Arrays.copyOf() --浅拷贝
    * compareTo()方法
-	   * 实质是比较Unicode的大小
+      * 实质是比较Unicode的大小
