@@ -51,20 +51,17 @@
 	<li>情况一</li>
 	<p>aFunction添加了@Transaction注解，aInnerFunction没有添加，aFunction抛异常</p>
 ```java
-	
 public class AClass {
-
 	@Transactional(rollbackFor = Exception.class)
     	public void aFunction() {
-        		//todo: 数据库操作A(增，删，该)
-        		aInnerFunction(); // 调用内部没有添加@Transactional注解的函数
+		//todo: 数据库操作A(增，删，该)
+		// 调用内部没有添加@Transactional注解的函数
+        	aInnerFunction();
 	}
-
-private void aInnerFunction() {
-	//todo: 操作数据B(做了增，删，改 操作)
+	private void aInnerFunction() {
+		//todo: 操作数据B(做了增，删，改 操作)
         	throw new RuntimeException("函数执行有异常!");
     	}
-
 }
 ```
 </ol>
