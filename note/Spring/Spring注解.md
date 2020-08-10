@@ -59,6 +59,7 @@ public class AClass {
 		// 调用内部没有添加@Transactional注解的函数
         	aInnerFunction();
 	}
+	
 	private void aInnerFunction() {
 		//todo: 操作数据B(做了增，删，改 操作)
         	throw new RuntimeException("函数执行有异常!");
