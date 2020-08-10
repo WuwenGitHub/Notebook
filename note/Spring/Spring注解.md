@@ -50,7 +50,8 @@
 <ol>
 	<li>情况一</li>
 	<p>aFunction添加了@Transaction注解，aInnerFunction没有添加，aFunction抛异常</p>
-```java  
+```java
+	
 public class AClass {
 
 	@Transactional(rollbackFor = Exception.class)
