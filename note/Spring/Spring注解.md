@@ -50,8 +50,8 @@
 <ol>
 	<li>情况一</li>
 	<p>aFunction添加了@Transaction注解，aInnerFunction没有添加，aFunction抛异常</p>
-```java
-	
+	<pre>
+		<code>
 public class AClass {
 	@Transactional(rollbackFor = Exception.class)
     	public void aFunction() {
@@ -64,6 +64,6 @@ public class AClass {
         	throw new RuntimeException("函数执行有异常!");
     	}
 }
-
-```
+		</code>
+	</pre>
 </ol>
